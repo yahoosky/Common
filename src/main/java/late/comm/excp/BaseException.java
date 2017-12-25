@@ -77,4 +77,16 @@ public class BaseException extends Exception {
 	public String getErrMsg() {
 		return this.errMsg;
 	}
+
+	/**
+	 * @description 获取错误码
+	 * @methodName getErrMsg
+	 * @author chijingjia
+	 * @createTime 2017-4-7 下午05:50:43
+	 * @version v1.0
+	 * @return
+	 */
+	public String getErrCode() {
+		return this.errCode;
+	}
 }

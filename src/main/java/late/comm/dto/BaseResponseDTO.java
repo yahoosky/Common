@@ -29,4 +29,9 @@ public abstract class BaseResponseDTO {
 		this.status = status;
 	}
 
+	public void setRetInfo(String errCode, String errMsg) {
+		this.status.setErrCode(errCode);
+		this.status.setErrMsg(errMsg);
+	}
+
 }
