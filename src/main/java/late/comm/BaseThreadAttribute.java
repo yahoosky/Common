@@ -11,7 +11,8 @@ import java.util.UUID;
  * @description 存储线程信息容器。
  * @projectName FileProcessorAPI
  * @packageName tf.file.comm
- * @fileName FileProcessorThreadAttribute.java
+ * @fileName FileProc】、
+ * essorThreadAttribute.java
  * @author chijingjia
  * @createTime :2017-3-2 下午05:19:31
  * @version: v1.0
