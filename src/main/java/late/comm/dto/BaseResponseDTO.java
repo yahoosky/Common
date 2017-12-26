@@ -30,6 +30,7 @@ public abstract class BaseResponseDTO {
 	}
 
 	public void setRetInfo(String errCode, String errMsg) {
+		this.status.setReplayCode(99);
 		this.status.setErrCode(errCode);
 		this.status.setErrMsg(errMsg);
 	}
