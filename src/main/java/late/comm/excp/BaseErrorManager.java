@@ -21,10 +21,7 @@ import late.comm.log.TraceLogger;
  * @version: v1.0
  */
 public class BaseErrorManager {
-	/**
-	 * @description 内部日志类
-	 */
-	protected static final Logger logger = Logger.getLogger(BaseErrorManager.class);
+	private static final String THIS_COMPONMENT_NAME = BaseErrorManager.class.getName();
 
 	/**
 	 * @description 抛出错误信息。用于业务级
@@ -38,8 +35,8 @@ public class BaseErrorManager {
 	 */
 	public static void throwMessage(String errCode, String info, String... params) throws BaseException {
 		String errMsg = BaseErrorCache.getErrMsg(errCode, params);
-		TraceLogger.error(info, null, params);
-		TraceLogger.error(errMsg, null);
+		TraceLogger.error(THIS_COMPONMENT_NAME, info, null, params);
+		TraceLogger.error(THIS_COMPONMENT_NAME, errMsg, null);
 		throw new BaseException(errCode, errMsg);
 	}
 
@@ -54,7 +51,7 @@ public class BaseErrorManager {
 	 * @param params
 	 */
 	public static void logException(Throwable e, String... params) {
-		TraceLogger.error("交易出现异常", e, params);
+		TraceLogger.error(THIS_COMPONMENT_NAME, "交易出现异常", e, params);
 	}
 
 	/**

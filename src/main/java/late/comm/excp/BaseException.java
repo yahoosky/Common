@@ -6,6 +6,7 @@ package late.comm.excp;
 import org.apache.log4j.Logger;
 
 import late.comm.BaseThreadAttribute;
+import late.comm.log.TraceLogger;
 
 /**
  * @description 文件处理异常类
@@ -17,23 +18,20 @@ import late.comm.BaseThreadAttribute;
  * @version: v1.0
  */
 public class BaseException extends Exception {
+	private static final String THIS_COMPONMENT_NAME = BaseException.class.getName();
 	/**
 	 * @description 版本序列号
 	 */
 	private static final long serialVersionUID = -2207944455637274432L;
-	/**
-	 * @description 内部日志类
-	 */
-	protected static final Logger logger = Logger.getLogger(BaseException.class);
 
 	/**
 	 * @description 错误码
 	 */
-	private String errCode;
+	protected String errCode;
 	/**
 	 * @description 错误信息
 	 */
-	private String errMsg;
+	protected String errMsg;
 
 	/**
 	 * @description 构造方法。复用双参构造方法。默认警告
@@ -63,7 +61,7 @@ public class BaseException extends Exception {
 				.append("]")//
 				.append(errMsg)//
 		;
-		logger.debug(msg);
+		TraceLogger.debug(THIS_COMPONMENT_NAME, msg.toString());
 	}
 
 	/**
