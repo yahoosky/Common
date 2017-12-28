@@ -4,6 +4,7 @@
 package late.comm.dto;
 
 import late.comm.TradeStatus;
+import late.comm.utils.StringUtils;
 
 /**
  * 返回抽象父类
@@ -29,10 +30,29 @@ public abstract class BaseResponseDTO {
 		this.status = status;
 	}
 
+	/**
+	 * 设置返回信息
+	 * 
+	 * @methodName setRetInfo
+	 * @author chijingjia
+	 * @createTime 2017年12月28日 上午10:57:05
+	 * @version v1.0
+	 * @param errCode
+	 * @param errMsg
+	 */
 	public void setRetInfo(String errCode, String errMsg) {
-		this.status.setReplayCode(99);
-		this.status.setErrCode(errCode);
-		this.status.setErrMsg(errMsg);
+		if (!StringUtils.isEmpty(errCode)) {
+			getStatus().setReplayCode(99);
+			getStatus().setErrCode(errCode);
+			getStatus().setErrMsg(errMsg);
+		}
+	}
+	
+	public void setExcp(Throwable e){
+		if(e!=null){
+			getStatus().setReplayCode(99);
+			//TODO
+		}
 	}
 
 }

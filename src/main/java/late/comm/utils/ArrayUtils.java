@@ -1,7 +1,7 @@
 /**
  * 
  */
-package late.com.utils;
+package late.comm.utils;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 数组工具
  * 
  * @projectName common
- * @packageName late.com.utils
+ * @packageName late.comm.utils
  * @fileName ArrayUtils.java
  * @author chijingjia
  * @createTime :2017年12月27日 上午11:09:41
