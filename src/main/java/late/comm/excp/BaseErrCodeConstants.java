@@ -18,5 +18,10 @@ public interface BaseErrCodeConstants {
 	 * 用户自定义的错误信息
 	 */
 	public static final String USER_DEFINED_MSG = "USERDEF01";
-	
+
+	/**
+	 * 未知异常信息
+	 */
+	public static final String UNKNOWN_EXCEPTION = "UKNOWEXCP";
+
 }

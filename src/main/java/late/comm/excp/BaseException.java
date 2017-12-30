@@ -3,8 +3,6 @@
  */
 package late.comm.excp;
 
-import org.apache.log4j.Logger;
-
 import late.comm.BaseThreadAttribute;
 import late.comm.log.TraceLogger;
 
@@ -54,6 +52,7 @@ public class BaseException extends Exception {
 
 	@Override
 	public void printStackTrace() {
+		// TODO 日志输出方式未处理，希望添加为含异常栈信息
 		StringBuilder msg = new StringBuilder()//
 				.append(BaseThreadAttribute.getStr(BaseThreadAttribute.TRADE_ID)).append("交易出现异常")//
 				.append("[")//

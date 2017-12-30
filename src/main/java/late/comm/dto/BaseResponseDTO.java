@@ -4,6 +4,8 @@
 package late.comm.dto;
 
 import late.comm.TradeStatus;
+import late.comm.excp.BaseErrCodeConstants;
+import late.comm.excp.BaseException;
 import late.comm.utils.StringUtils;
 
 /**
@@ -47,11 +49,17 @@ public abstract class BaseResponseDTO {
 			getStatus().setErrMsg(errMsg);
 		}
 	}
-	
-	public void setExcp(Throwable e){
-		if(e!=null){
+
+	public void setExcp(Throwable e) {
+		if (e != null) {
 			getStatus().setReplayCode(99);
-			//TODO
+			if (e instanceof BaseException) {
+				getStatus().setErrCode(((BaseException) e).getErrCode());
+				getStatus().setErrMsg(((BaseException) e).getErrMsg());
+			} else {
+				getStatus().setErrCode(BaseErrCodeConstants.UNKNOWN_EXCEPTION);
+				getStatus().setErrMsg(e.getMessage());
+			}
 		}
 	}
 
