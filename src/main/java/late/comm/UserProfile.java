@@ -23,6 +23,10 @@ public class UserProfile {
 	 * 级别
 	 */
 	private String lvl;
+	/**
+	 * Session标志
+	 */
+	private String ticket;
 
 	/**
 	 * @return the userId
@@ -67,6 +71,14 @@ public class UserProfile {
 	 */
 	public void setLvl(String lvl) {
 		this.lvl = lvl;
+	}
+
+	public String getTicket() {
+		return ticket;
+	}
+
+	public void setTicket(String ticket) {
+		this.ticket = ticket;
 	}
 
 }

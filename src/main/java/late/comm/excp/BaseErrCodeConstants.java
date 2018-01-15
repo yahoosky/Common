@@ -24,4 +24,14 @@ public interface BaseErrCodeConstants {
 	 */
 	public static final String UNKNOWN_EXCEPTION = "UKNOWEXCP";
 
+	/**
+	 * 用户总线为空
+	 */
+	public static final String USER_CONTEXT_ISNULL = "COMM0002";
+
+	/**
+	 * 登录超时
+	 */
+	public static final String USER_LOGIN_TIMEOUT = "COMM0003";
+
 }
