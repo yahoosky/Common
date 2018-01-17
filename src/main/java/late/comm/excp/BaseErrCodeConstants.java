@@ -34,4 +34,8 @@ public interface BaseErrCodeConstants {
 	 */
 	public static final String USER_LOGIN_TIMEOUT = "COMM0003";
 
+	/**
+	 * 未知异常信息
+	 */
+
 }

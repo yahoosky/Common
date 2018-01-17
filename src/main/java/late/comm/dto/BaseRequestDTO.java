@@ -3,8 +3,6 @@
  */
 package late.comm.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import late.comm.SessionContext;
 
 /**
@@ -17,7 +15,6 @@ import late.comm.SessionContext;
  * @createTime :2017年12月4日 上午10:17:10
  * @version: v1.0
  */
-@JsonIgnoreProperties({"context"})
 public abstract class BaseRequestDTO {
 
 	/**
